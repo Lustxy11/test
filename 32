@@ -4185,7 +4185,7 @@ UserInputService.InputBegan:Connect(function(input, gameProcessed)
         -- Add Random Item
         if key == UIState.keybinds.addRandomItem then
             if mockState.active then
-                addPetButton(getRandomHighValuePet(), generateRandomPetProperties())
+                addPetToPlayer(getRandomHighValuePet(), generateRandomPetProperties())
             end
         end
         
