@@ -2306,7 +2306,7 @@ spawnWithPetsStroke.Transparency = 0.3
 spawnWithPetsStroke.Parent = spawnWithPetsButton
 
 spawnWithPetsButton.MouseButton1Click:Connect(function()
-    CONFIG.SPAWN_FAKE_PLAYER_WITH_RANDOM_PET = not CONFIG.SPAWN_FAKE_PLAYER_WITH_RANDOM_PET
+    CONFIG.SPAWN_FAKE_PLAYER_WITH_RANDOM_PET = not CONFIG.SPAWN_FAKE_PLAYER_WITH_RANDOM_PET 
     spawnWithPetsButton.Text = 'Spawn with random pet: ' .. (CONFIG.SPAWN_FAKE_PLAYER_WITH_RANDOM_PET and 'true' or 'false')
     if CONFIG.SPAWN_FAKE_PLAYER_WITH_RANDOM_PET then
         spawnWithPetsButton.BackgroundColor3 = Color3.fromRGB(50, 150, 50)
@@ -4185,7 +4185,7 @@ UserInputService.InputBegan:Connect(function(input, gameProcessed)
         -- Add Random Item
         if key == UIState.keybinds.addRandomItem then
             if mockState.active then
-                addPetToPartnerOffer(getRandomHighValuePet(), generateRandomPetProperties())
+                addPetButton(getRandomHighValuePet(), generateRandomPetProperties())
             end
         end
         
